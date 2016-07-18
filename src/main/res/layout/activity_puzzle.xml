@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_puzzle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondary_text">
+
+    <LinearLayout
+        android:id="@+id/spiner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center_horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="步数："
+            android:textColor="@color/icons"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/step"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="0"
+            android:paddingRight="50dp"
+            android:textColor="@color/icons"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="时间："
+            android:textColor="@color/icons"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/icons"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/btns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp">
+
+        <com.andexert.library.RippleView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:id="@+id/origin">
+        <Button
+            android:id="@+id/main_img"
+            style="@style/textStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg"
+            android:text="原图"
+            android:textColor="@color/icons"
+            />
+        </com.andexert.library.RippleView>
+
+
+        <com.andexert.library.RippleView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:id="@+id/reseting">
+        <Button
+            android:id="@+id/main_reset"
+            style="@style/textStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg"
+            android:text="重置"
+            android:textColor="@color/icons"
+            />
+
+        </com.andexert.library.RippleView>
+
+
+        <com.andexert.library.RippleView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:id="@+id/back">
+
+        <Button
+            android:id="@+id/main_back"
+            style="@style/textStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg"
+            android:text="返回"
+            android:textColor="@color/icons"
+            />
+        </com.andexert.library.RippleView>
+
+    </LinearLayout>
+
+    <GridView
+    android:id="@+id/main_detail"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/btns"
+    android:layout_below="@+id/spiner"
+    android:layout_centerInParent="true"
+    android:horizontalSpacing="5dp"
+    android:verticalSpacing="5dp"
+    android:layout_margin="10dp">
+
+    </GridView>
+
+    <ImageView
+        android:id="@+id/originImage"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btns"
+        android:layout_below="@+id/spiner"
+        android:layout_centerInParent="true"
+        android:horizontalSpacing="5dp"
+        android:verticalSpacing="5dp"
+        android:layout_margin="10dp"/>
+
+<!--    <ImageView
+        android:id="@+id/main_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btns"
+        android:layout_below="@+id/spiner"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp">
+
+    </ImageView>-->
+
+</RelativeLayout>

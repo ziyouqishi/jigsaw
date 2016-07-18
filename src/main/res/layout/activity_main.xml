@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondary_text">
+
+    <LinearLayout
+        android:id="@+id/ll_puzzle_main_spiner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+       >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="选择难度"
+            android:textColor="@color/icons"
+            android:onClick="test"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/select_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="2X2"
+            android:background="@drawable/textview_click"
+            android:textColor="@color/icons"
+            android:layout_marginLeft="20dp"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/pic_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_puzzle_main_spiner"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:horizontalSpacing="10dp"
+        android:numColumns="4"
+        android:padding="10dp"
+        android:verticalSpacing="10dp"
+        >
+
+    </GridView>
+
+
+
+</RelativeLayout>
